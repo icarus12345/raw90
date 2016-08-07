@@ -1,0 +1,13 @@
+<ion-view view-title="Playlists">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+        {{playlist.title}}
+      </ion-item>
+    </ion-list>
+    Lat: {{geo.latitude}}<br/>
+    Lon: {{geo.longitude}}<br/>
+    City: {{geo.city}}<br/>
+    <div  ng-if="auth">Auth: {{auth.firstName}} {{auth.lastName}}</div>
+  </ion-content>
+</ion-view>

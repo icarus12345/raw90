@@ -1,0 +1,22 @@
+<ion-view>
+    <ion-content scroll="false" id="login-content">
+        <div id="login-logo" class="login-logo"></div>
+    </ion-content>
+    <div class="tabs login-box" id="login-box">
+        <div class="row">
+            <div class="col ">
+                <form id="frmLogin" ng-submit="doLogin()" class="raw-form">
+                    <div class="list">
+                        <input type="text" ng-model="loginData.username" id="txtUserName" placeholder="Username" class="text-center">
+                    </div>
+                    <div class="list">
+                        <input type="password" ng-model="loginData.password" id="txtPassword" placeholder="Password" class="text-center">
+                    </div>
+                    <div class="row">
+                        <button class="button button-block" type="submit">&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ion-view>

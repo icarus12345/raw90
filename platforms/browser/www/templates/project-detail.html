@@ -1,0 +1,52 @@
+<ion-view title="Project Detail" hide-nav-bar="true">
+    <ion-content scroll="false" class="project-content">
+        <div class="raw-header">
+            <img src="img/logo-small.png">
+            <img class="logout-ico" src="img/logout-ico.png">
+        </div>
+                
+    </ion-content>
+    <div class="tabs raw-box-01">
+        <div class="row">
+            <div class="col">
+                <ion-list>
+                  <ion-item class="over-all-item">
+                    <div>
+                        NAME OF PROJECT #{{project.id}}
+                        <a href="#/project-detail-overall/{{project.id}}"></a>
+                    </div>
+                  </ion-item>
+                  <ion-item class="opp-item" href="#/project-detail-overall/{{project.id}}">
+                    <div>
+                        <span>1</span> Opportunity ( opp )
+                    </div>
+                  </ion-item>
+                  <ion-item class="team-item" href="#/project-detail-overall/{{project.id}}">
+                    <div>
+                        <span>2</span> Team
+                    </div>
+                  </ion-item>
+                  <ion-item class="resource-item" href="#/project-detail-overall/{{project.id}}">
+                    <div>
+                        <span>3</span> Resource
+                    </div>
+                  </ion-item>
+                  <ion-item class="enviroment-item" href="#/project-detail-overall/{{project.id}}">
+                    <div>
+                        <span>4</span> Enviroment
+                    </div>
+                  </ion-item>
+                  <ion-item class="back-to-home" ng-click="rawGoBack()">
+                    <div >
+                        <i>Home</i>
+                    </div>
+                  </ion-item>
+                </ion-list>
+                <div class="raw-footer">
+                    <span>&copy; 90&ordm; Ready</span>
+                    <a href="#" >Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-view>

@@ -1,0 +1,263 @@
+/* Empty. Add your own CSS if you like */
+body,html{
+    height: 100%;display: block;
+}
+.login-logo{
+    margin-top: 40px;
+    height: 40px;
+    background: url(../img/logo.png) no-repeat center;
+}
+#login-box{
+    height: auto;
+    border:0;
+    background: transparent;
+    padding: 20px;
+}
+#login-content{
+    background: url(../img/login-bg.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.raw-form input[type='password'],
+.raw-form input[type='text']{
+    width: 100%
+}
+.raw-form .button{
+    background: url(../img/signin-btn.png) no-repeat center;
+    text-indent: -1000px;
+    border:0;
+    outline: 0;
+    padding: 0;
+    margin: 0
+}
+.raw-form .list{margin-bottom: 10px;}
+.raw-form input{
+    background: rgba(255,255,255,.15);
+    border-radius: 22px;
+    /*line-height: 44px;*/
+    height: 44px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 0;
+    border: 1px solid #cdcece;
+}
+.raw-form input::-webkit-input-placeholder{
+    color: #ccc;
+    /*line-height: 44px;*/
+    text-align: center;
+}
+.project-list .item{
+    line-height: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border:0;
+}
+.project-list .item:nth-child(odd){
+    background: #e9e9e9;
+}
+.project-list .item:nth-child(even){
+    background: #f1f1f1;
+}
+.project-list .item > a.item-content{
+    background: transparent;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.project-list .item.item-stable{
+    color: #fff;
+    background: #117bc0;
+    line-height: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+.project-list:nth-child(odd) .item.item-stable{
+    color: #fff;
+    background: #369de0;
+}
+.tooltip_templates { display: none; }
+.wrap-content{
+    position: relative;
+}
+#project-content .wrap-content{
+    background: url(../img/project-bg.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    z-index: 1;
+}
+.action-icon{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    background: url(../img/action-icon.png) no-repeat center;
+    float: left;
+}
+.tooltipster-sidetip::before{
+    content: '';
+    position: fixed;
+    left: 0;top: 0;width: 100%;height: 100%;background: rgba(0,0,0,.3)
+}
+.tooltipster-sidetip .tooltipster-box{
+    position: relative;
+    background: #fff;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    z-index: 2;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border{
+    border-right-color: #fff;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background{
+    border-right-color:#fff;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border{
+    border-left-color: #fff;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background{
+    border-left-color:#fff;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border{
+    border-top-color: #fff;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background{
+    border-top-color:#fff;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border{
+    border-bottom-color: #fff;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background{
+    border-bottom-color:#fff;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow{
+    z-index: 2;
+}
+.tooltipster-sidetip .tooltipster-content{
+    padding: 0px;  
+}
+.action-icons > li {
+    padding: 5px;
+    border-bottom: 1px solid #ebebeb;
+}
+.action-icons > li:last-child{
+    border-bottom: 0;
+}
+.action-icons > li > span {
+    display: block;
+    width: 30px;height: 30px;
+    background: url(../img/more-icons.png) no-repeat 0 0;
+}
+.action-icons > li > span.edit-ico{background-position: 0 0}
+.action-icons > li > span.share-ico{background-position: 0 -30px}
+.action-icons > li > span.delete-ico{background-position: 0 -60px}
+.action-icons > li > span.mail-ico{background-position: 0 -90px}
+.raw-header{padding: 20px;}
+.raw-header > .logout-ico{
+    float: right;
+}
+.raw-footer{
+    height: 50px;background: #333333;
+    color: #fff;
+    line-height: 20px;padding: 15px;
+    
+}
+.raw-footer>span{float: left;width: 40%}
+.raw-footer>a{
+    float: right;text-align: right;width: 60%;
+    text-decoration: none;color: inherit;
+}
+.create-project-box{padding: 30px}
+.about-icons{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 36px;
+}
+.about-icons>img{
+    margin-top: 10px;
+}
+
+.raw-box-01{
+    height: auto;
+    border:0;
+    padding: 0;
+}
+.raw-box-01>.row,
+.raw-box-01>.row>.col{
+    padding: 0;
+}
+.raw-box-01 .list .item {
+    padding: 0;position: relative;
+    border:0;
+}
+.raw-box-01 .list .item > .item-content{
+    line-height: 30px;
+    padding: 0;
+    position: relative;
+    border:0;
+}
+.over-all-item{
+}
+.raw-box-01 .list .item > .item-content > div,
+.raw-box-01 .list .item > div {
+    padding: 15px 20px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+}
+.over-all-item>div{
+    background: #117bc0;
+    padding-right: 60px;
+}
+.over-all-item>div>a{
+    width: 60px;height: 60px;position: absolute;top: 0;right: 0;
+    background: url(../img/rada-chart-ico.png) no-repeat center #0c5686;
+}
+
+.opp-item>.item-content{
+    background: url(../img/li-4.png);
+}
+.opp-item>.item-content>div{
+    background: rgba(51, 204, 153, 0.50);
+    display: inline-block;
+}
+.team-item>.item-content>div{
+    background: rgba(51, 153, 204, 0.50);
+    display: inline-block;
+}
+.resource-item>.item-content>div{
+    background: rgba(153, 51, 153, 0.50);
+    display: inline-block;
+}
+.enviroment-item>.item-content>div{
+    background: rgba(0, 153, 153, 0.50);
+    display: inline-block;
+}
+.raw-box-01 .item>.item-content>div>span{
+    float: left;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.team-item>.item-content{
+    background: url(../img/li-3.png);
+}
+.resource-item>.item-content{
+    background: url(../img/li-2.png);
+}
+.enviroment-item>.item-content{
+    background: url(../img/li-1.png);
+}
+.back-to-home>div{
+    background: #ed2044;text-align: center;
+}
+.back-to-home>div>i{
+    line-height: 30px;padding-left: 30px;background: url(../img/arrow-left.png) no-repeat left center;
+}

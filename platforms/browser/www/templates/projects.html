@@ -1,0 +1,61 @@
+<ion-view view-title="Project" hide-nav-bar="true">
+  <ion-content id="project-content">
+    <div  style="height:{{windowHeight-168}}px" class="wrap-content">
+        <div class="raw-header">
+            <img src="img/logo-small.png">
+            <img class="logout-ico" src="img/logout-ico.png">
+        </div>
+        <div class="row">
+            <div class="col create-project-box">
+                <form id="frm-create-project" ng-submit="" class="raw-form">
+                    <div class="list">
+                        <input type="text" id="txt-project" placeholder="New project name" class="text-center">
+                    </div>
+                    <div class="row">
+                        <button class="button button-block" type="submit">&nbsp;</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="about-icons">
+            <img src="img/fb-ico.png">
+            <img src="img/info-ico.png">
+        </div>
+    </div>
+    <ion-list can-swipe="false" >
+        <div ng-repeat="project in projects" class="project-list">
+            <ion-item class="item-stable"
+                    ng-click="toggleGroup(project)"
+                    ng-class="{active: isGroupShown(project)}">
+            {{project.name}}
+              <i class="icon" ng-class="isGroupShown(project) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'" style="float:right"></i>
+            </ion-item>
+            <ion-item 
+                class="item-accordion"
+                ng-repeat="item in project.items"
+                ng-show="isGroupShown(project)"
+                href="#/project-detail/{{item.id}}"
+                >
+                <div class="action-icon tooltip" 
+                    data-tooltip-content="#tooltip_content"
+                    animation="fade">
+                </div>
+                <div>Project #{{item.id}}</div>
+                    
+            </ion-item>
+        </div>
+    </ion-list>
+    <div class="tooltip_templates">
+        <ul id="tooltip_content" class="action-icons">
+            <li><span class="edit-ico"></span></li>
+            <li><span class="share-ico"></span></li>
+            <li><span class="delete-ico"></span></li>
+            <li><span class="mail-ico"></span></li>
+        </ul>
+    </div>
+    <div class="raw-footer">
+        <span>&copy; 90&ordm; Ready</span>
+        <a>Terms & Conditions</a>
+    </div>
+  </ion-content>
+</ion-view>
