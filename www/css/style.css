@@ -49,9 +49,8 @@ body,html{
     text-align: center;
 }
 .project-list .item{
-    line-height: 24px;
-    padding-top: 0;
-    padding-bottom: 0;
+    line-height: 30px;
+    padding: 15px;
     border:0;
 }
 .project-list .item:nth-child(odd){
@@ -60,18 +59,25 @@ body,html{
 .project-list .item:nth-child(even){
     background: #f1f1f1;
 }
-.project-list .item > a.item-content{
+.project-list .item > div{
     background: transparent;
-    line-height: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    line-height: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.arrow-right-ico{
+    width: 30px;height: 30px;
+    /*background: url(../img/arrow-right.png) no-repeat center;*/
+    position: absolute;
+    top: 0;right: 0;
+    text-align: center;
 }
 .project-list .item.item-stable{
     color: #fff;
     background: #117bc0;
-    line-height: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    line-height: 30px;
+    padding: 15px;
 }
 .project-list:nth-child(odd) .item.item-stable{
     color: #fff;
@@ -88,12 +94,13 @@ body,html{
     z-index: 1;
 }
 .action-icon{
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
     background: url(../img/action-icon.png) no-repeat center;
     float: left;
 }
+
 .tooltipster-sidetip::before{
     content: '';
     position: fixed;
@@ -190,6 +197,9 @@ body,html{
 .raw-box-01>.row>.col{
     padding: 0;
 }
+.raw-box-01 .list{
+    padding: 0
+}
 .raw-box-01 .list .item {
     padding: 0;position: relative;
     border:0;
@@ -217,7 +227,10 @@ body,html{
     width: 60px;height: 60px;position: absolute;top: 0;right: 0;
     background: url(../img/rada-chart-ico.png) no-repeat center #0c5686;
 }
-
+.over-all-item>div>span{
+    width: 60px;height: 60px;position: absolute;top: 0;right: 0;
+    background: url(../img/rada-chart-ico.png) no-repeat center #0c5686;
+}
 .opp-item>.item-content{
     background: url(../img/li-4.png);
 }
@@ -260,4 +273,93 @@ body,html{
 }
 .back-to-home>div>i{
     line-height: 30px;padding-left: 30px;background: url(../img/arrow-left.png) no-repeat left center;
+}
+.raw-box-00 .list{
+    padding: 0
+}
+
+.raw-cover{
+    position: relative;padding-bottom: 56.42%;
+}
+.raw-cover>.raw-header{
+    position: absolute;
+    top: 0;left: 0;width: 100%
+}
+.raw-box-03{
+    height: auto;
+    border:0;
+    padding: 0;
+}
+.raw-box-03>.row,
+.raw-box-03>.row>.col{
+    padding: 0;
+}
+.raw-box-03 .list{
+    padding: 0
+}
+.raw-box-03 .list .item {
+    padding: 0;position: relative;
+    border:0;
+}
+.raw-box-03 .list .item > .item-content{
+    line-height: 30px;
+    padding: 0;
+    position: relative;
+    border:0;
+}
+.over-all-item{
+}
+.raw-box-03 .list .item > .item-content > div,
+.raw-box-03 .list .item > div {
+    padding: 15px 20px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    background: #33cc99
+}
+.raw-box-03 .list .over-all-item>div{
+    background: #117bc0
+}
+.current-line,
+.goal-line{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    line-height: 30px
+}
+.goal-line>span{
+    width: 25px;height: 12px;background: #803690;
+    position: absolute;left: 0;top: 9px;
+}
+.current-line>span{
+    width: 25px;height: 12px;
+    position: absolute;left: 0;top: 9px;
+    background: #00ADF9
+}
+.chart-list-item{
+    /*padding: 10px;*/
+}
+.chart-list-item li{
+}
+.chart-list-item li div{
+    padding: 5px 10px;
+    /*padding: 10px;*/
+}
+.chart-list-item li div span{
+    float: left;
+    color: #fff;
+    background: #000;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 10px;
+    margin-right: 10px; 
+}
+.chart-list-item li p{
+    margin: 0 0 0 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 2px solid #81b6d8;
 }

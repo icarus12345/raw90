@@ -1,5 +1,95 @@
-<ion-view title="Project Detail Over All">
+<ion-view title="Project Detail Over All" hide-nav-bar="true" hide-back-button="true">
+    <!-- 
+    <ion-header-bar align-title="left" class="raw-bar">
+        <div 
+            class="button back-button buttons header-item button-clear"
+            ng-click="$ionicGoBack()">
+            <i class="icon ion-ios-arrow-back" ></i>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button logout-button"></button>
+        </div>
+    </ion-header-bar>
+    -->
     <ion-content scroll="true" >
+        <div class="raw-cover">
+            <div class="raw-header">
+                <img src="img/logo-small.png">
+                <img class="logout-ico" src="img/logout-ico.png">
+            </div>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item class="over-all-item">
+                        <div>
+                            NAME OF PROJECT #{{project.id}}
+                            <span ng-click="$ionicGoBack()"></span>
+                        </div>
+                </ion-item>
+                <ion-item>
+                        <div>
+                            OVERALL
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
+            <canvas 
+                class="chart chart-radar" 
+                width="360" height="360" 
+                chart-data="ocws[0].data" 
+                chart-options="ocws[0].options" 
+                chart-labels="ocws[0].labels" 
+                chart-colors="ocws[0].colors"
+                chart-legend="true"
+                auto-legend
+                ></canvas>
+        <div>
+            <ul class="chart-list-item">
+                <li>
+                    <div><span>1</span> Opportunity</div>
+                    <p>
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+                <li>
+                    <div><span>2</span> Team</div>
+                </li>
+                <li>
+                    <div><span>3</span> Resource</div>
+                </li>
+                <li>
+                    <div><span>4</span> Enviroment</div>
+                </li>
+            </ul>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item>
+                        <div>
+                            OVERALL
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
         <canvas 
             class="chart chart-radar" width="360" height="360" 
             chart-data="ocw.data" 
@@ -9,18 +99,17 @@
             chart-legend="true"
             tc-chartjs-radar
             auto-legend
-            ></canvas> 
-
-        <canvas 
-            class="chart chart-radar" width="360" height="360" 
-            chart-data="ocw.data" 
-            chart-options="ocw.options" 
-            chart-labels="ocw.labels" 
-            chart-colors="ocw.colors"
-            chart-legend="true"
-            tc-chartjs-radar
-            auto-legend
-            ></canvas> 
+            ></canvas>
+        <button class="button button-icon ion-more" ng-click="popover.show($event)"></button>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
         <canvas 
             class="chart chart-radar" width="360" height="360" 
             chart-data="ocw.data" 
@@ -32,11 +121,27 @@
             auto-legend
             ></canvas> 
     </ion-content>
-    <div class="tabs login-box">
-        <div class="row">
-            <div class="col ">
-                {{project.title}}
-            </div>
-        </div>
-    </div>
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list">
+            <a class="item" href="http://learn.ionicframework.com/" target="_blank">
+              Learn Ionic
+            </a>
+            <a class="item" href="http://ionicframework.com/docs/" target="_blank">
+              Documentation
+            </a>
+            <a class="item" href="http://showcase.ionicframework.com/" target="_blank">
+              Showcase
+            </a>
+            <a class="item" href="http://ionicframework.com/submit-issue/" target="_blank">
+              Submit an Issue
+            </a>
+            <a class="item" href="https://github.com/driftyco/ionic" target="_blank">
+              Github Repo
+            </a>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
 </ion-view>

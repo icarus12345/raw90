@@ -115,12 +115,13 @@ angular.module('starter.controllers', [])
     Auth.authorization($scope, $ionicModal);
 })
 
-.controller('ProjectDetailCtrl', function($scope, $stateParams, Projects) {
+.controller('ProjectDetailCtrl', function($scope, $stateParams, $ionicHistory, Projects) {
+    $scope.windowHeight = (window.innerHeight);
     $scope.project = Projects.get($stateParams.projectId);
     $scope.rawGoBack = function () { $ionicHistory.goBack(); }
 })
 
-.controller('ProjectDetailOverallCtrl', function($scope, $stateParams, Projects) {
+.controller('ProjectDetailOverallCtrl', function($scope, $stateParams, $ionicPopover, Projects) {
     $scope.project = Projects.get($stateParams.projectId);
     $scope.ocw = {
         labels: ["1", "2", "3", "4", "5", "6", "7"],
@@ -130,10 +131,27 @@ angular.module('starter.controllers', [])
         ],
         colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
         options: {
+            animation: false,
             legendTemplate : '<ul class="tc-chart-js-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>'
         }
     };
-
+    $scope.ocws = [{
+        labels: ["1", "2", "3", "4"],
+        data: [
+            [65, 59, 90, 81],
+            [28, 48, 40, 19]
+        ],
+        colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+        options: {
+            animation: false,
+            
+        }
+    }];
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
 })
 
 .controller('AccountCtrl', function($scope) {
