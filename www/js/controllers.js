@@ -115,7 +115,7 @@ angular.module('starter.controllers', [])
     Auth.authorization($scope, $ionicModal);
 })
 
-.controller('ProjectDetailCtrl', function($scope, $stateParams, Projects) {
+.controller('ProjectDetailCtrl', function($scope, $stateParams, $ionicHistory, Projects) {
     $scope.project = Projects.get($stateParams.projectId);
     $scope.rawGoBack = function () { $ionicHistory.goBack(); }
 })

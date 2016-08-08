@@ -49,9 +49,8 @@ body,html{
     text-align: center;
 }
 .project-list .item{
-    line-height: 24px;
-    padding-top: 0;
-    padding-bottom: 0;
+    line-height: 30px;
+    padding: 15px;
     border:0;
 }
 .project-list .item:nth-child(odd){
@@ -60,18 +59,25 @@ body,html{
 .project-list .item:nth-child(even){
     background: #f1f1f1;
 }
-.project-list .item > a.item-content{
+.project-list .item > div{
     background: transparent;
-    line-height: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    line-height: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+
+.arrow-right-ico{
+    width: 30px;height: 30px;
+    /*background: url(../img/arrow-right.png) no-repeat center;*/
+    position: absolute;
+    top: 0;right: 0;
+    text-align: center;
 }
 .project-list .item.item-stable{
     color: #fff;
     background: #117bc0;
-    line-height: 24px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    line-height: 30px;
+    padding: 15px;
 }
 .project-list:nth-child(odd) .item.item-stable{
     color: #fff;
@@ -88,12 +94,13 @@ body,html{
     z-index: 1;
 }
 .action-icon{
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
     background: url(../img/action-icon.png) no-repeat center;
     float: left;
 }
+
 .tooltipster-sidetip::before{
     content: '';
     position: fixed;
