@@ -230,6 +230,13 @@ body,html{
 .over-all-item>div>span{
     width: 60px;height: 60px;position: absolute;top: 0;right: 0;
     background: url(../img/rada-chart-ico.png) no-repeat center #0c5686;
+    text-align: center;
+    /*padding-top: 14px;*/
+    line-height: 30px;
+    font-size: 60px;
+}
+.over-all-item>div>span.icon{
+    background-image: none;
 }
 .opp-item>.item-content{
     background: url(../img/li-4.png);
@@ -338,7 +345,7 @@ body,html{
     background: #00ADF9
 }
 .chart-list-item{
-    /*padding: 10px;*/
+    padding: 10px;
 }
 .chart-list-item li{
 }
@@ -362,4 +369,15 @@ body,html{
     padding-left: 10px;
     padding-right: 10px;
     border-left: 2px solid #81b6d8;
+}
+.chart-list-item li div .icon-arrow-up-active,
+.chart-list-item li div .icon-arrow-down-active{
+    width: 20px;height: 20px;
+    float: right;
+}
+.chart-list-item li div .icon-arrow-down-active{
+    background: url(../img/arrow-down-active.png) no-repeat center;
+}
+.chart-list-item li div .icon-arrow-up-active{
+    background: url(../img/arrow-up-active.png) no-repeat center;
 }

@@ -123,18 +123,6 @@ angular.module('starter.controllers', [])
 
 .controller('ProjectDetailOverallCtrl', function($scope, $stateParams, $ionicPopover, Projects) {
     $scope.project = Projects.get($stateParams.projectId);
-    $scope.ocw = {
-        labels: ["1", "2", "3", "4", "5", "6", "7"],
-        data: [
-            [65, 59, 90, 81, 56, 55, 40],
-            [28, 48, 40, 19, 96, 27, 100]
-        ],
-        colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
-        options: {
-            animation: false,
-            legendTemplate : '<ul class="tc-chart-js-legend"><% for (var i=0; i<datasets.length; i++){%><li><span style="background-color:<%=datasets[i].strokeColor%>"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>'
-        }
-    };
     $scope.ocws = [{
         labels: ["1", "2", "3", "4"],
         data: [
@@ -144,9 +132,74 @@ angular.module('starter.controllers', [])
         colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
         options: {
             animation: false,
+            scale: {
+                ticks: {
+                    // stepSize: 20,
+                    maxTicksLimit: 5,
+                    beginAtZero: true
+                }
+            }
+        }
+    },{
+        labels: ["T", "P", "S", "F", "H"],
+        data: [
+            [65, 59, 90, 81, 56],
+            [28, 48, 40, 19, 96]
+        ],
+        colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+        options: {
+            animation: false,
+            scale: {
+                ticks: {
+                    // stepSize: 20,
+                    maxTicksLimit: 5,
+                    beginAtZero: true
+                }
+            }
+        }
+    },{
+        labels: ["1", "2", "3", "4", '5'],
+        data: [
+            [100, 55, 30, 45, 45],
+            [60, 55, 60, 35, 75]
+        ],
+        colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+        options: {
+            animation: false,
+            scale: {
+                ticks: {
+                    // stepSize: 20,
+                    maxTicksLimit: 5,
+                    beginAtZero: true
+                }
+            }
             
         }
     }];
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+})
+
+.controller('GraphChartCtrl', function($scope, $stateParams, $ionicPopover, GraphChart) {
+    console.log(GraphChart[$stateParams.type])
+    console.log($stateParams.type)
+    $scope.graphChart = GraphChart[$stateParams.type];
+    $scope.ocw = {
+        colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
+        options: {
+            animation: false,
+            scale: {
+                ticks: {
+                    // stepSize: 20,
+                    maxTicksLimit: 5,
+                    beginAtZero: true
+                }
+            }
+        }
+    };
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
         scope: $scope,
     }).then(function(popover) {

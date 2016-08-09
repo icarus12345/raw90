@@ -115,6 +115,12 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
         controller: 'ProjectDetailOverallCtrl'
     })
 
+    .state('graph-chart', {
+        url: '/graph-chart/:projectId/:type',
+        templateUrl: 'templates/graph-chart.html',
+        controller: 'GraphChartCtrl'
+    })
+
     .state('app.browse', {
         url: '/browse',
         views: {
