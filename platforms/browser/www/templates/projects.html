@@ -22,35 +22,41 @@
             <img src="img/info-ico.png">
         </div>
     </div>
+    <div class="raw-box-00">
     <ion-list can-swipe="false" >
         <div ng-repeat="project in projects" class="project-list">
             <ion-item class="item-stable"
                     ng-click="toggleGroup(project)"
                     ng-class="{active: isGroupShown(project)}">
-            {{project.name}}
-              <i class="icon" ng-class="isGroupShown(project) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'" style="float:right"></i>
+                    {{project.name}}
+                    <i class="icon" ng-class="isGroupShown(project) ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'" style="float:right"></i>
             </ion-item>
             <ion-item 
                 class="item-accordion"
                 ng-repeat="item in project.items"
                 ng-show="isGroupShown(project)"
-                href="#/project-detail/{{item.id}}"
+                
                 >
-                <div class="action-icon tooltip" 
-                    data-tooltip-content="#tooltip_content"
-                    animation="fade">
+                <div>
+                    <div class="action-icon tooltip" 
+                        data-tooltip-content="#tooltip_content"
+                        animation="fade">
+                    </div>
+                    Project #{{item.id}}
+                    <a href="#/project-detail/{{item.id}}/home" class="arrow-right-ico">
+                        <!-- <i class="icon ion-ios-arrow-right"></i> -->
+                    </a>
                 </div>
-                <div>Project #{{item.id}}</div>
-                    
             </ion-item>
         </div>
     </ion-list>
+    </div>
     <div class="tooltip_templates">
         <ul id="tooltip_content" class="action-icons">
-            <li><span class="edit-ico"></span></li>
+            <li><a href="#/choise" class="edit-ico"></a></li>
             <li><span class="share-ico"></span></li>
             <li><span class="delete-ico"></span></li>
-            <li><span class="mail-ico"></span></li>
+            <li><a href="#/choise" class="mail-ico"></a></li>
         </ul>
     </div>
     <div class="raw-footer">

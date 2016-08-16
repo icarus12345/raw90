@@ -1,42 +1,225 @@
-<ion-view title="Project Detail Over All">
+<ion-view title="Project Detail Over All" hide-nav-bar="true" hide-back-button="true">
+    <!-- 
+    <ion-header-bar align-title="left" class="raw-bar">
+        <div 
+            class="button back-button buttons header-item button-clear"
+            ng-click="$ionicGoBack()">
+            <i class="icon ion-ios-arrow-back" ></i>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button logout-button"></button>
+        </div>
+    </ion-header-bar>
+    -->
     <ion-content scroll="true" >
-        <canvas 
-            class="chart chart-radar" width="360" height="360" 
-            chart-data="ocw.data" 
-            chart-options="ocw.options" 
-            chart-labels="ocw.labels" 
-            chart-colors="ocw.colors"
-            chart-legend="true"
-            tc-chartjs-radar
-            auto-legend
-            ></canvas> 
-
-        <canvas 
-            class="chart chart-radar" width="360" height="360" 
-            chart-data="ocw.data" 
-            chart-options="ocw.options" 
-            chart-labels="ocw.labels" 
-            chart-colors="ocw.colors"
-            chart-legend="true"
-            tc-chartjs-radar
-            auto-legend
-            ></canvas> 
-        <canvas 
-            class="chart chart-radar" width="360" height="360" 
-            chart-data="ocw.data" 
-            chart-options="ocw.options" 
-            chart-labels="ocw.labels" 
-            chart-colors="ocw.colors"
-            chart-legend="true"
-            tc-chartjs-radar
-            auto-legend
-            ></canvas> 
-    </ion-content>
-    <div class="tabs login-box">
-        <div class="row">
-            <div class="col ">
-                {{project.title}}
+        <div class="raw-cover">
+            <div class="raw-header">
+                <img src="img/logo-small.png">
+                <img class="logout-ico" src="img/logout-ico.png">
             </div>
         </div>
-    </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item class="over-all-item">
+                        <div>
+                            NAME OF PROJECT #{{project.id}}
+                            <span ng-click="$ionicGoBack()" class="icon ion-ios-close-empty"></span>
+                        </div>
+                </ion-item>
+                <ion-item>
+                        <div>
+                            OVERALL
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
+            <canvas 
+                class="chart chart-radar" 
+                width="360" height="360" 
+                chart-data="ocws[0].data" 
+                chart-options="ocws[0].options" 
+                chart-labels="ocws[0].labels" 
+                chart-colors="ocws[0].colors"
+                chart-legend="true"
+                auto-legend
+                ></canvas>
+        <div>
+            <ul class="chart-list-item">
+                <li>
+                    <div onclick="$(this).next().toggle();$(this).find('>i').toggleClass('icon-arrow-up-active icon-arrow-down-active')"><span>1</span><i class="icon-arrow-up-active"></i> Opportunity </div>
+                    <p>
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+                <li>
+                    <div onclick="$(this).next().toggle();$(this).find('>i').toggleClass('icon-arrow-up-active icon-arrow-down-active')"><span>2</span><i class="icon-arrow-down-active"></i> Team</div>
+                    <p style="display:none">
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+                <li>
+                    <div onclick="$(this).next().toggle();$(this).find('>i').toggleClass('icon-arrow-up-active icon-arrow-down-active')"><span>3</span><i class="icon-arrow-down-active"></i> Resource</div>
+                    <p style="display:none">
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+                <li>
+                    <div onclick="$(this).next().toggle();$(this).find('>i').toggleClass('icon-arrow-up-active icon-arrow-down-active')"><span>4</span><i class="icon-arrow-down-active"></i> Enviroment</div>
+                    <p style="display:none">
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item>
+                        <div>
+                            Opportinity ( opp )
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
+        <canvas 
+            class="chart chart-radar" width="360" height="360" 
+            chart-data="ocws[1].data" 
+            chart-options="ocws[1].options" 
+            chart-labels="ocws[1].labels" 
+            chart-colors="ocws[1].colors"
+            chart-legend="true"
+            tc-chartjs-radar
+            auto-legend
+            ></canvas>
+        <div>
+            <ul class="chart-list-item">
+                <li>
+                    <div><span>1</span><i class="icon-arrow-down-active"></i> Target Market</div>
+                    <p>
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+                <li>
+                    <div><span>2</span><i class="icon-arrow-down-active"></i> Product</div>
+                </li>
+                <li>
+                    <div><span>3</span><i class="icon-arrow-down-active"></i> Sustainable Competitive Adv.</div>
+                </li>
+                <li>
+                    <div><span>4</span><i class="icon-arrow-down-active"></i> Financial Proformation</div>
+                </li>
+                <li>
+                    <div><span>5</span><i class="icon-arrow-down-active"></i> Harvestability</div>
+                </li>
+            </ul>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item>
+                        <div>
+                            Team
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <button class="button button-icon ion-more" ng-click="popover.show($event)"></button>
+        <div class = "row">
+            <div class = "col text-center">
+                <div class="goal-line"><span></span> Goal</div>
+            </div>
+            <div class = "col text-center">
+                <div class="current-line"><span></span> Project #{{project.id}}
+                </div>
+            </div>
+        </div>
+        <canvas 
+            class="chart chart-radar" width="360" height="360" 
+            chart-data="ocws[2].data" 
+            chart-options="ocws[2].options" 
+            chart-labels="ocws[2].labels" 
+            chart-colors="ocws[2].colors"
+            chart-legend="true"
+            tc-chartjs-radar
+            auto-legend
+            ></canvas> 
+        <div>
+            <ul class="chart-list-item">
+                <li>
+                    <div><span>1</span><i class="icon-arrow-down-active"></i> Bootstraping</div>
+                </li>
+                <li>
+                    <div><span>2</span><i class="icon-arrow-down-active"></i> Economic</div>
+                </li>
+                <li>
+                    <div><span>3</span><i class="icon-arrow-down-active"></i> Social & Attitudinal</div>
+                </li>
+                <li>
+                    <div><span>4</span><i class="icon-arrow-down-active"></i> Technological</div>
+                </li>
+            </ul>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item>
+                        <div>
+                            Resource
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="raw-box-01">
+        <ion-list>
+            <ion-item class="back-to-home" ng-click="$ionicGoBack()">
+            <div >
+                <i>BACK</i>
+            </div>
+            </ion-item>
+        </ion-list>
+        </div>
+        <div class="raw-footer">
+            <span>&copy;&nbsp;90&ordm;&nbsp;Ready</span>
+            <a>Terms&nbsp;&&nbsp;Conditions</a>
+        </div>
+    </ion-content>
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list">
+            <div class="item">
+              Learn Ionic
+            </div>
+            <div class="item">
+              Documentation
+            </div>
+            <div class="item">
+              Showcase
+            </div>
+            <div class="item">
+              Submit an Issue
+            </div>
+            <div class="item">
+              Github Repo
+            </div>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
 </ion-view>

@@ -8,6 +8,7 @@
 var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','chart.js'])
 
 .run(function($ionicPlatform) {
+    ionic.Platform.setPlatform('ios')
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -97,14 +98,21 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
             }
         }
     })
+
     .state('projects', {
         url: '/',
         templateUrl: 'templates/projects.html',
         controller: 'ProjectsCtrl'
     })
 
+    .state('choise', {
+        url: '/choise',
+        templateUrl: 'templates/choise.html',
+        controller: 'ChoiseCtrl'
+    })
+
     .state('project-detail', {
-        url: '/project-detail/:projectId',
+        url: '/project-detail/:projectId/:type',
         templateUrl: 'templates/project-detail.html',
         controller: 'ProjectDetailCtrl'
     })

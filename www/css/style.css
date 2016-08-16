@@ -1,6 +1,7 @@
 /* Empty. Add your own CSS if you like */
 body,html{
     height: 100%;display: block;
+    /*font-family: 'SEGOEUIL'*/
 }
 .login-logo{
     margin-top: 40px;
@@ -18,7 +19,11 @@ body,html{
     background-size: cover;
     -webkit-background-size: cover;
 }
-
+.bg-1>.scroll{
+    background: url(../img/bg-1.jpg) no-repeat top center #fff;
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+}
 .raw-form input[type='password'],
 .raw-form input[type='text']{
     width: 100%
@@ -68,7 +73,7 @@ body,html{
 
 .arrow-right-ico{
     width: 30px;height: 30px;
-    /*background: url(../img/arrow-right.png) no-repeat center;*/
+    background: url(../img/arrow-right-gray.png) no-repeat center;
     position: absolute;
     top: 0;right: 0;
     text-align: center;
@@ -100,7 +105,9 @@ body,html{
     background: url(../img/action-icon.png) no-repeat center;
     float: left;
 }
-
+.tooltipster-base{
+    pointer-events:inherit;
+}
 .tooltipster-sidetip::before{
     content: '';
     position: fixed;
@@ -153,15 +160,16 @@ body,html{
 .action-icons > li:last-child{
     border-bottom: 0;
 }
+.action-icons > li > a,
 .action-icons > li > span {
     display: block;
     width: 30px;height: 30px;
     background: url(../img/more-icons.png) no-repeat 0 0;
 }
-.action-icons > li > span.edit-ico{background-position: 0 0}
-.action-icons > li > span.share-ico{background-position: 0 -30px}
-.action-icons > li > span.delete-ico{background-position: 0 -60px}
-.action-icons > li > span.mail-ico{background-position: 0 -90px}
+.action-icons > li > .edit-ico{background-position: 0 0}
+.action-icons > li > .share-ico{background-position: 0 -30px}
+.action-icons > li > .delete-ico{background-position: 0 -60px}
+.action-icons > li > .mail-ico{background-position: 0 -90px}
 .raw-header{padding: 20px;}
 .raw-header > .logout-ico{
     float: right;
@@ -238,25 +246,7 @@ body,html{
 .over-all-item>div>span.icon{
     background-image: none;
 }
-.opp-item>.item-content{
-    background: url(../img/li-4.png);
-}
-.opp-item>.item-content>div{
-    background: rgba(51, 204, 153, 0.50);
-    display: inline-block;
-}
-.team-item>.item-content>div{
-    background: rgba(51, 153, 204, 0.50);
-    display: inline-block;
-}
-.resource-item>.item-content>div{
-    background: rgba(153, 51, 153, 0.50);
-    display: inline-block;
-}
-.enviroment-item>.item-content>div{
-    background: rgba(0, 153, 153, 0.50);
-    display: inline-block;
-}
+
 .raw-box-01 .item>.item-content>div>span{
     float: left;
     background: #000;
@@ -266,20 +256,55 @@ body,html{
     border-radius: 15px;
     margin-right: 10px;
 }
-.team-item>.item-content{
+.four-item>.item-content{
+    background: url(../img/li-4.png);
+}
+.three-item>.item-content{
     background: url(../img/li-3.png);
 }
-.resource-item>.item-content{
+.two-item>.item-content{
     background: url(../img/li-2.png);
 }
-.enviroment-item>.item-content{
+.one-item>.item-content{
     background: url(../img/li-1.png);
 }
+.five-item>.item-content{
+    background: url(../img/li-5.png);
+}
+
+
+.one-item>.item-content>div{
+    background: rgba(51, 204, 153, 0.7);
+    display: inline-block;
+}
+.two-item>.item-content>div{
+    background: rgba(51, 153, 204, 0.7);
+    display: inline-block;
+}
+.three-item>.item-content>div{
+    background: rgba(153, 51, 153, 0.7);
+    display: inline-block;
+}
+.four-item>.item-content>div{
+    background: rgba(0, 153, 153, 0.7);
+    display: inline-block;
+}
+.five-item>.item-content>div{
+    background: rgba(108, 34, 183, 0.7);
+    display: inline-block;
+}
+
 .back-to-home>div{
     background: #ed2044;text-align: center;
 }
 .back-to-home>div>i{
     line-height: 30px;padding-left: 30px;background: url(../img/arrow-left.png) no-repeat left center;
+}
+.finish>div{
+    background: #117bc0;text-align: center;
+}
+.finish>div>i{
+    line-height: 30px;padding-left: 30px;background: url(../img/check-ico.png) no-repeat left center;
 }
 .raw-box-00 .list{
     padding: 0
@@ -380,4 +405,66 @@ body,html{
 }
 .chart-list-item li div .icon-arrow-up-active{
     background: url(../img/arrow-up-active.png) no-repeat center;
+}
+
+
+.choise-box {
+    height: auto;
+    border:0;
+    padding: 0;
+}
+.choise-box >.row,
+.choise-box >.row>.col{
+    padding: 0;
+}
+.choise-box  .list{
+    padding: 0
+}
+.choise-box  .list .item {
+    padding: 0;position: relative;
+    border:0;
+}
+.choise-box  .list .item > .item-content{
+    line-height: 30px;
+    padding: 0;
+    position: relative;
+    border:0;
+}
+.choise-box  .list .item > .item-content > div,
+.choise-box  .list .item > div {
+    padding: 15px 20px 15px 60px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 18px;
+    background: #ed2044;
+    position: relative;
+}
+.choise-box .item{
+    white-space: initial;
+}
+.choise-box .item>div>span.num{
+    position: absolute;top: 15px;left: 15px;
+    background: #000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.choise-box .item>div>span.hightlight{
+    text-decoration: underline;
+}
+.popover {
+  height: auto !important;
+}
+.popover ion-header-bar {
+  position: relative;
+}
+.popover ion-content {
+  top: 0;
+  position: relative;
+}
+.popover-inner-content {
+  width: 100%;
+  padding: 5px 20px;
 }

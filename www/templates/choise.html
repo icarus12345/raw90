@@ -1,0 +1,110 @@
+<ion-view title="Project Detail Over All" hide-nav-bar="true" hide-back-button="true" style="background:url()">
+    <!-- 
+    <ion-header-bar align-title="left" class="raw-bar">
+        <div 
+            class="button back-button buttons header-item button-clear"
+            ng-click="$ionicGoBack()">
+            <i class="icon ion-ios-arrow-back" ></i>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button logout-button"></button>
+        </div>
+    </ion-header-bar>
+    -->
+    <ion-content scroll="true" class="bg-1">
+        <div class="raw-cover">
+            <div class="raw-header">
+                <img src="img/logo-small.png">
+                <img class="logout-ico" src="img/note-ico.png">
+            </div>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item class="over-all-item">
+                        <div>
+                            BOOTSTRAPPING
+                            <!-- <span ng-click="$ionicGoBack()" class="icon ion-ios-close-empty"></span> -->
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        
+        <div class="choise-box">
+            <ion-list>
+                <ion-item>
+                    <div>
+                        <span class="num">1</span> Could you bootstrap at this time ?
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="" style="padding:10px 20px;">
+            <div class="">
+                <button class="button button-stable button-block button-outline">
+                  Yes
+                </button>
+                <button class="button button-balanced button-block">
+                  No
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Possibly
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Partially
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Potential
+                </button>
+            </div>
+        </div>
+        <div class="choise-box">
+            <ion-list>
+                <ion-item>
+                    <div>
+                        <span class="num">2</span> Could you bootstrap <span class="hightlight" ng-click="popover.show($event)">at this time </span> ? Hu hu hu
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="" style="padding:10px 20px;">
+            <div class="">
+                <button class="button button-stable button-block button-outline">
+                  Yes
+                </button>
+                <button class="button button-balanced button-block">
+                  No
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Possibly
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Partially
+                </button>
+                <button class="button button-stable button-block button-outline">
+                  Potential
+                </button>
+            </div>
+        </div>
+        <div class="raw-box-01">
+            <ion-list>
+                <ion-item class="finish" ng-click="$ionicGoBack()">
+                <div >
+                    <i>Finish</i>
+                </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="raw-footer">
+            <span>&copy;&nbsp;90&ordm;&nbsp;Ready</span>
+            <a>Terms&nbsp;&&nbsp;Conditions</a>
+        </div>
+    </ion-content>
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content scroll="false">
+          <div style="padding:10px">Like in above codepen my trigger for popover is at footer, so i want...</div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+</ion-view>

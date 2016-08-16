@@ -118,6 +118,156 @@ angular.module('starter.controllers', [])
 .controller('ProjectDetailCtrl', function($scope, $stateParams, $ionicHistory, Projects) {
     $scope.windowHeight = (window.innerHeight);
     $scope.project = Projects.get($stateParams.projectId);
+    if ($stateParams.type == 'home') {
+        $scope.pdata = {
+            btn: 'HOME',
+            items: [
+                {
+                    title: 'NAME OF PROJECT #' + $stateParams.projectId,
+                    url: '#/project-detail-overall/' + $stateParams.projectId
+                },{
+                    title: 'Opportunity ( opp )',
+                    url: '#/project-detail/' + $stateParams.projectId + '/opp'
+                },{
+                    title: 'Team',
+                    url: '#/project-detail/' + $stateParams.projectId + '/team'
+                },{
+                    title: 'Resource',
+                    url: '#/project-detail/' + $stateParams.projectId + '/resource'
+                },{
+                    title: 'Enviroment',
+                    url: '#/project-detail/' + $stateParams.projectId + '/enviroment'
+                // },{
+                //     title: 'Team',
+                //     url: '#/graph-chart/' + $stateParams.projectId + '/opportunity'
+                }
+            ]
+        };
+    }
+    if ($stateParams.type == 'opp') {
+        $scope.pdata = {
+            btn: 'BACK',
+            items: [
+                {
+                    title: 'OPPORTUNITY (OPP)',
+                    url: '#/graph-chart/' + $stateParams.projectId + '/opportunity'
+                },{
+                    title: 'Target Marker',
+                    url: '#/project-detail/' + $stateParams.projectId + '/sub'
+                },{
+                    title: 'Product',
+                    url: '#/project-detail/' + $stateParams.projectId + '/sub'
+                },{
+                    title: 'Sustainable Competitive Adv',
+                    url: '#/project-detail/' + $stateParams.projectId + '/sub'
+                },{
+                    title: 'Financial Performance',
+                    url: '#/project-detail/' + $stateParams.projectId + '/sub'
+                },{
+                    title: 'Harvestability',
+                    url: '#/project-detail/' + $stateParams.projectId + '/sub'
+                }
+            ]
+        };
+    }
+    if ($stateParams.type == 'sub') {
+        $scope.pdata = {
+            btn: 'BACK',
+            items: [
+                {
+                    title: 'TARGET MARKET',
+                    url: '#/graph-chart/' + $stateParams.projectId + '/opportunity'
+                },{
+                    title: 'Target Marker Size',
+                    url: '#/choise'
+                },{
+                    title: 'Market Structor',
+                    url: '#/choise'
+                },{
+                    title: 'Competitors',
+                    url: '#/choise'
+                },{
+                    title: 'Customers',
+                    url: '#/choise'
+                },{
+                    title: 'Pricing',
+                    url: '#/choise'
+                }
+            ]
+        };
+    }
+    if ($stateParams.type == 'team') {
+        $scope.pdata = {
+            btn: 'BACK',
+            items: [
+                {
+                    title: 'TEAM',
+                    url: '#/graph-chart/' + $stateParams.projectId + '/team'
+                },{
+                    title: 'Investor Readiness',
+                    url: '#/choise'
+                },{
+                    title: 'Entrepreneurial Skills',
+                    url: '#/choise'
+                },{
+                    title: 'Functional Skills',
+                    url: '#/choise'
+                },{
+                    title: 'Leadership Skills',
+                    url: '#/choise'
+                },{
+                    title: 'Balance & Integrity',
+                    url: '#/choise'
+                }
+            ]
+        };
+    }
+    if ($stateParams.type == 'resource') {
+        $scope.pdata = {
+            btn: 'BACK',
+            items: [
+                {
+                    title: 'RESOURCE',
+                    url: '#/graph-chart/' + $stateParams.projectId + '/resource'
+                },{
+                    title: 'Bootstrapping',
+                    url: '#/choise'
+                },{
+                    title: 'External People',
+                    url: '#/choise'
+                },{
+                    title: 'Bussiness Planing',
+                    url: '#/choise'
+                },{
+                    title: 'Financial',
+                    url: '#/choise'
+                }
+            ]
+        };
+    }
+    if ($stateParams.type == 'enviroment') {
+        $scope.pdata = {
+            btn: 'BACK',
+            items: [
+                {
+                    title: 'ENVIROMENT',
+                    url: '#/graph-chart/' + $stateParams.projectId + '/enviroment'
+                },{
+                    title: 'Grovernment / Regulatory',
+                    url: '#/choise'
+                },{
+                    title: 'Ecomomic',
+                    url: '#/choise'
+                },{
+                    title: 'Social & Attitudinal',
+                    url: '#/choise'
+                },{
+                    title: 'Technological',
+                    url: '#/choise'
+                }
+            ]
+        };
+    }
     $scope.rawGoBack = function () { $ionicHistory.goBack(); }
 })
 
@@ -186,7 +336,7 @@ angular.module('starter.controllers', [])
 .controller('GraphChartCtrl', function($scope, $stateParams, $ionicPopover, GraphChart) {
     console.log(GraphChart[$stateParams.type])
     console.log($stateParams.type)
-    $scope.graphChart = GraphChart[$stateParams.type];
+    $scope.graphChart = GraphChart['opportunity'];
     $scope.ocw = {
         colors: [ '#803690', '#00ADF9', '#DCDCDC', '#46BFBD', '#FDB45C', '#949FB1', '#4D5360'],
         options: {
@@ -200,6 +350,14 @@ angular.module('starter.controllers', [])
             }
         }
     };
+    $ionicPopover.fromTemplateUrl('templates/popover.html', {
+        scope: $scope,
+    }).then(function(popover) {
+        $scope.popover = popover;
+    });
+})
+
+.controller('ChoiseCtrl', function($scope, $stateParams, $ionicPopover) {
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
         scope: $scope,
     }).then(function(popover) {

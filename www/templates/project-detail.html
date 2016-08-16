@@ -1,5 +1,5 @@
 <ion-view title="Project Detail" hide-nav-bar="true">
-    <ion-content scroll="true" class="project-content">
+    <ion-content scroll="true" class="project-content bg-1" >
       <div class="raw-cover">
         <div class="raw-header">
             <img src="img/logo-small.png">
@@ -10,36 +10,46 @@
     <div class="tabs raw-box-01">
         <div class="row">
             <div class="col">
+                <!--
+                <div ng-repeat="item in pdata.items">
+                {{$index}}
+                </div>
+                -->
                 <ion-list>
                   <ion-item class="over-all-item">
                     <div>
-                        NAME OF PROJECT #{{project.id}}
-                        <a href="#/project-detail-overall/{{project.id}}"></a>
+                        {{pdata.items[0].title}}
+                        <a href="{{pdata.items[0].url}}"></a>
                     </div>
                   </ion-item>
-                  <ion-item class="opp-item" href="#/graph-chart/{{project.id}}/opportunity">
+                  <ion-item ng-if="pdata.items[1]" class="one-item" href="{{pdata.items[1].url}}">
                     <div>
-                        <span>1</span> Opportunity ( opp )
+                        <span>1</span> {{pdata.items[1].title}}
                     </div>
                   </ion-item>
-                  <ion-item class="team-item" href="#/project-detail-overall/{{project.id}}">
+                  <ion-item ng-if="pdata.items[2]" class="two-item" href="{{pdata.items[2].url}}">
                     <div>
-                        <span>2</span> Team
+                        <span>2</span> {{pdata.items[2].title}}
                     </div>
                   </ion-item>
-                  <ion-item class="resource-item" href="#/project-detail-overall/{{project.id}}">
+                  <ion-item ng-if="pdata.items[3]" class="three-item" href="{{pdata.items[3].url}}">
                     <div>
-                        <span>3</span> Resource
+                        <span>3</span> {{pdata.items[3].title}}
                     </div>
                   </ion-item>
-                  <ion-item class="enviroment-item" href="#/project-detail-overall/{{project.id}}">
+                  <ion-item ng-if="pdata.items[4]" class="four-item" href="{{pdata.items[4].url}}">
                     <div>
-                        <span>4</span> Enviroment
+                        <span>4</span> {{pdata.items[4].title}}
+                    </div>
+                  </ion-item>
+                  <ion-item ng-if="pdata.items[5]" class="five-item" href="{{pdata.items[5].url}}">
+                    <div>
+                        <span>5</span> {{pdata.items[5].title}}
                     </div>
                   </ion-item>
                   <ion-item class="back-to-home" ng-click="$ionicGoBack()">
                     <div >
-                        <i>Home</i>
+                        <i>{{pdata.btn}}</i>
                     </div>
                   </ion-item>
                 </ion-list>
