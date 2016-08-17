@@ -129,6 +129,11 @@ var app = angular.module('starter', ['ionic', 'starter.controllers', 'starter.se
         controller: 'GraphChartCtrl'
     })
 
+    .state('mail', {
+        url: '/mail',
+        templateUrl: 'templates/mail.html',
+        // controller: 'GraphChartCtrl'
+    })
     .state('app.browse', {
         url: '/browse',
         views: {
