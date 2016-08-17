@@ -1,0 +1,110 @@
+<ion-view title="Project Detail Over All" hide-nav-bar="true" hide-back-button="true">
+    <!-- 
+    <ion-header-bar align-title="left" class="raw-bar">
+        <div 
+            class="button back-button buttons header-item button-clear"
+            ng-click="$ionicGoBack()">
+            <i class="icon ion-ios-arrow-back" ></i>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons">
+            <button class="button logout-button"></button>
+        </div>
+    </ion-header-bar>
+    -->
+    <ion-content scroll="true" >
+        <div class="raw-cover">
+            <div class="raw-header">
+                <img src="img/logo-small.png">
+                <img class="logout-ico" src="img/logout-ico.png">
+            </div>
+        </div>
+        <div class="raw-box-03">
+            <ion-list>
+                <ion-item class="over-all-item">
+                        <div>
+                            {{graphChart.title}}
+                            <span ng-click="$ionicGoBack()" class="icon ion-ios-close-empty"></span>
+                        </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div ng-repeat="chart in graphChart.charts">
+            <div class="raw-box-03">
+                <ion-list>
+                    <ion-item>
+                            <div>
+                                {{chart.title}}
+                            </div>
+                    </ion-item>
+                </ion-list>
+            </div>
+            <div class = "row">
+                <div class = "col text-center">
+                    <div class="goal-line"><span></span> Goal</div>
+                </div>
+                <div class = "col text-center">
+                    <div class="current-line"><span></span> Project #{{project.id}}
+                    </div>
+                </div>
+            </div>
+            <canvas 
+                class="chart chart-radar" 
+                width="360" 
+                height="360" 
+                chart-data="graphChart.charts[$index].data" 
+                chart-options="ocw.options" 
+                chart-labels="graphChart.charts[$index].labels" 
+                chart-colors="ocw.colors"
+                chart-legend="true"
+                auto-legend
+                ></canvas>
+            <ul class="chart-list-item">
+                <li ng-repeat="ti in chart.titles">
+                    <div onclick="$(this).next().toggle();$(this).find('>i').toggleClass('icon-arrow-up-active icon-arrow-down-active')">
+                        <span>{{chart.labels[$index]}}</span><i ng-class="index == 0 ? 'icon-arrow-up-active' : 'icon-arrow-down-active'"></i> {{ti}} </div>
+                    <p style="display:{{$index == 0?'block':'none'}}">
+                        You can also change the navbar’s color the same way. This will allow you to have a different color navbar per page in your app.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="raw-box-01">
+            <ion-list>
+                <ion-item class="back-to-home" ng-click="$ionicGoBack()">
+                <div >
+                    <i>Home</i>
+                </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <div class="raw-footer">
+            <span>&copy;&nbsp;90&ordm;&nbsp;Ready</span>
+            <a>Terms&nbsp;&&nbsp;Conditions</a>
+        </div>
+    </ion-content>
+    <script id="templates/popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list">
+            <div class="item">
+              Learn Ionic
+            </div>
+            <div class="item">
+              Documentation
+            </div>
+            <div class="item">
+              Showcase
+            </div>
+            <div class="item">
+              Submit an Issue
+            </div>
+            <div class="item">
+              Github Repo
+            </div>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+</ion-view>

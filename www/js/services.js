@@ -48,7 +48,78 @@ angular.module('starter.services', [])
         }
     };
 })
-
+.factory('GraphChart', function() {
+    return {
+        opportunity: {
+            title: 'OPPORTUNITY',
+            charts: [{
+                title: 'OVERALL',
+                labels: ["T", "P", "S", "F", "H"],
+                data: [
+                    [60, 60, 75, 60, 65],
+                    [50, 58, 0, 0, 0]
+                ],
+                titles: [
+                'Target Marker',
+                'Product',
+                'Sustainable Competitive Adv.',
+                'Financial Performance',
+                'Hasvestability',
+                ]
+            },{
+                title: 'Target Market',
+                labels: ["1", "2", "3", "4", "5"],
+                data: [
+                    [65, 59, 90, 81, 56],
+                    [28, 48, 40, 19, 96]
+                ],
+                titles: [
+                'Target Marker Size',
+                'Maket Structure',
+                'Competitors',
+                'Customers',
+                'Pricing',
+                ]
+            },{
+                title: 'Product',
+                labels: ["1", "2", "3"],
+                data: [
+                    [65, 59, 81],
+                    [28, 48, 40]
+                ],
+                titles: [
+                'Product Characteristics',
+                'Process',
+                'Team, Resource, Opp'
+                ]
+            },{
+                title: 'Financial Performance',
+                labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+                data: [
+                    [80, 100, 40, 40, 20, 20, 80, 100, 100, 60, 80, 60, 100, 20, 80],
+                    [58, 48, 60, 80, 72, 100, 60, 80, 60, 100, 100, 80, 88, 66, 77]
+                ],
+                titles: [
+                'Capital Requirements',
+                'After tax profits',
+                'Net Cash Flow',
+                'Internal Rate of Return (IRR)',
+                'Investment Multiple Returned',
+                'Sales Growth',
+                'Working Capital',
+                'Gross Margin',
+                'Historical Performance',
+                'Time to Cash Neutral',
+                'Time to Profit (Annual)',
+                'Time to Profit (Cumulative)',
+                'Time to Breakeven',
+                'Cost Structure (ratio of fixed to variable costs)',
+                'Gearing'
+                ]
+            }]
+        }
+    }
+})
 .factory('Projects', function() {
     // Might use a resource here that returns a JSON array
 
