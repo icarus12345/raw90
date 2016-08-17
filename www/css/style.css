@@ -53,6 +53,28 @@ body,html{
     /*line-height: 44px;*/
     text-align: center;
 }
+.one-bar.bar{border: 0;background: none}
+.one-bar .button,
+.one-bar .title{color: #1e93d4;text-align: center;}
+.email-form input{
+    background: rgba(255,255,255,.15);
+    border-radius: 22px;
+    /*line-height: 44px;*/
+    height: 44px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 20px;
+    border: 1px solid #1e93d4;
+    width: 100%
+}
+.email-form button {
+    background: #1e93d4;
+    border-radius: 22px;
+    margin: auto;
+    padding: 5px 40px;color: #fff;
+    line-height:30px;
+    min-height: 0;
+}
 .project-list .item{
     line-height: 30px;
     padding: 15px;
@@ -467,4 +489,14 @@ body,html{
 .popover-inner-content {
   width: 100%;
   padding: 5px 20px;
+}
+.scroll-content.vertical{
+  display: table !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.scroll-content.vertical .scroll {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
